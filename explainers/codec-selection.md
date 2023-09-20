@@ -14,7 +14,7 @@ WebRTC implementations use by default the first negotiated codec for each RTP st
 
 While the current APIs allow an application to change the codec order, renegotiate and update the encoding parameters, this will require many calls and will possibly start sending media with the new codec but old parameter for a short moment. Different codecs are likely to support a different set of scalability modes, so being able to configure both the codec and its scalability mode in the same API call is essential to being able to reconfigure the encoder smoothly, without temporarily using a wrong configuration or producing unnecessary key frames due to multiple reconfiguration steps or having to temporarily disable the stream during reconfiguration.
 
-Additionally, since only the first codec is used for all the RTP streams on a single transceiver object, it is not possible to use a different codec on simulcast layers. With the emergence of newer codec with better efficiency, this configuration has become more attractive for applications.
+Additionally, since only the first codec is used for all the RTP streams on a single transceiver object, it is not possible to use a different codec on simulcast layers. With the emergence of newer codecs with better efficiency, this configuration has become more attractive for applications.
 
 ## Goals
 
